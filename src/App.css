@@ -1,0 +1,567 @@
+/* Root Colors and Variables */
+:root {
+  --primary-bg: #fff;  /* Dark navy blue background */
+  --primary-text: #fff;
+  --highlight-blue: #00A7FF;  /* Neon blue */
+  --highlight-red: #FF4D4D;  /* Neon red */
+  --card-bg: rgba(29, 40, 80, 0.804);  /* Semi-transparent card background */
+  --button-gradient: linear-gradient(45deg, #051848, #FF4D4D); /* Neon gradient */
+  --button-hover: #ff4d4d;  /* Red hover color */
+  --card-shadow: rgba(255, 255, 255, 0.3); /* Soft shadow effect */
+  --card-3d-shadow: 0px 10px 30px #020b1d; /* 3D shadow effect for result cards */
+  --glow-effect: 0px 0px 15px rgba(177, 19, 19, 0.8); /* Neon blue glow effect */
+  --font-family: 'Roboto', sans-serif;
+  --font-heading: 'Orbitron', sans-serif;
+  --error-gradient: linear-gradient(45deg, #ff0000, #330000); /* Gradient red-black */
+}
+
+/* Global Styles */
+body {
+  font-family: var(--font-family);
+  background: var(--primary-bg); /* Dark navy blue background */
+  color: var(--primary-text);
+  margin: 0;
+  padding: 0;
+ 
+  height: 100vh;
+}
+.app-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+/* Main Card Section */
+.main-card-container {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 30px;
+  flex-wrap: wrap; 
+  overflow-x: auto;
+  overflow-y: auto;
+ /* Allow cards to wrap */
+}
+
+/* Card Styling */
+.card {
+ 
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);  /* Default shadow */
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Hover effect for 3D shadow */
+.card:hover {
+  box-shadow: var(--card-3d-shadow); 
+  /* 3D-like shadow */
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.app-title {
+  font-size: 32px;
+  font-family: var(--font-heading);
+  font-weight: bold;
+  color: var(--primary-text);
+  text-shadow: black;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: auto;
+
+}
+.error-icon {
+  color: #ff6b6b;
+  margin-right: 8px;
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.modal-header{
+  color: #fff;
+}
+.modal-content {
+  background: #fff;
+  overflow-x: auto;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: var(--card-shadow);
+  color: #333;
+}
+
+.close-modal-btn {
+  background:linear-gradient(45deg, #00A7FF, #FF4D4D);
+  color: white;
+  padding: 8px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.close-modal-btn:hover {
+  background: #a87171;
+}
+
+/* Ensure proper wrapping and spacing for the error cards */
+.error-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.error-card {
+  background: linear-gradient(45deg, #250d0d, #640303); /* Dark blue background for result cards */
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: var(--card-3d-shadow); /* 3D shadow effect */
+  border-left: 5px solid red;
+  transition: 0.3s ease;
+  width: 100%;
+  max-width: 80%;
+  min-height:60px ;
+  backdrop-filter: blur(5px);
+  overflow-x: auto;
+  overflow-y: auto;
+  margin-top: 2%;
+  margin-left: 10%; /* Glassmorphism effect */
+}
+
+.error-card:hover {
+  transform: scale(1.02);
+  background: linear-gradient(45deg, #250d0d, #1a0707);
+  border-left: linear-gradient(45deg, #5d0707, #1a0707);
+}
+
+.error-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--highlight-blue);
+}
+
+.error-message {
+  font-size: 16px;
+  color: var(--highlight-red);
+  font-weight: 600;
+}
+
+.error-description {
+  font-size: 14px;
+  color: #ddd;
+  margin-top: 5px;
+  font-family: "Roboto";}
+
+
+.reset-btn {
+  
+  color: white;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  height:36px;
+  width:140px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  transition: 0.3s;
+  background:linear-gradient(45deg, #00A7FF, #FF4D4D);
+}
+
+.reset-btn:hover {
+  background:linear-gradient(45deg,#71b4d8, #e66c6c);
+  transform: scale(1.05);
+  
+
+}
+
+.success-img{
+ 
+  width: 400px; /* Make the image responsive */
+  height: 400px; /* Maintain the aspect ratio */
+  border-radius: 150px; /* Rounded corners */
+   
+  object-fit: cover;
+}
+
+.r-button-container {
+  position: fixed;
+  bottom: 10px; /* Adjust this value for desired margin from bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999; /* Ensure it stays on top of other content */
+  
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Neon Glow for Hovering Effects */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px var(--highlight-blue), 0 0 10px var(--highlight-blue);
+  }
+  50% {
+    box-shadow: 0 0 15px var(--highlight-blue), 0 0 25px var(--highlight-blue);
+  }
+  100% {
+    box-shadow: 0 0 5px var(--highlight-blue), 0 0 10px var(--highlight-blue);
+  }
+}
+
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 15px;
+  height: 60vh;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ccc;
+  border-top: 5px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  
+  .main-card-container {
+    flex-direction: column;
+   
+  }
+
+  .image-container {
+    display: none; /* Hide the image on smaller screens */
+  }
+
+  .card {
+    width: 100%;
+  }
+
+ 
+}
+.upload-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  margin: 20px auto;
+ 
+}
+
+.upload-title {
+  font-size: 15px;
+  color: #070534;
+  margin-bottom: 15px;
+}
+
+.upload-input {
+  display: block;
+  width: 95%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #070534;
+  transition: border 0.3s ease;
+  cursor: pointer;
+}
+
+.upload-input:hover,
+.upload-input:focus {
+  border-color: #7af342;
+  outline: none;
+}
+
+.custom-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 50px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  cursor: pointer;
+  color: #070534;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.custom-button:active {
+  transform: scale(0.95);
+}
+
+.custom-button.secondary {
+  background: #f0f0f0;
+  color: #555;
+}
+
+.custom-button:hover {
+  background: #e0e0e0;
+  color: #000;
+}
+/* Global Styles */
+
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.modal-content {
+  background: #020b1d;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  color: #333;
+  
+}
+
+.close-modal-btn {
+  background: linear-gradient(45deg, #00A7FF, #FF4D4D);
+  color: white;
+  padding: 8px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.close-modal-btn:hover {
+  background: #a87171;
+}
+
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ccc;
+  border-top: 5px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  /* Adjust for smaller screens */
+  .error-cards {
+    flex-direction: column; /* Stack the cards vertically */
+    align-items: center; /* Center align the cards */
+  }
+
+  .error-card {
+    max-width: 100%; /* Make each card take full width on small screens */
+  }
+}
+
+
+/* Container for Error Details */
+.error-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.spinner-bgg{
+  color:black;
+}
+
+/* Center the loader */
+.loader-containerr {
+  position: fixed; /* Fix the loader in place */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Correct positioning */
+  display: flex; /* Use flexbox to center the loader */
+  justify-content: center; /* Align horizontally */
+  align-items: center; /* Align vertically */
+  z-index: 9999; /* Ensure it appears on top of other content */
+}
+
+/* Heading */
+.error-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #9e0505;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* Error Item Styling */
+.error-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border-left: 5px solid #ff6b6b;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+/* Hover effect for error items */
+.error-item:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Error Titles */
+.error-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #ff6b6b;
+}
+
+/* Error Description */
+.error-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .error-container {
+    width: 90%;
+    padding: 16px;
+  }
+
+  .error-heading {
+    font-size: 1.5rem;
+  }
+
+  .error-title {
+    font-size: 1.1rem;
+  }
+
+  .error-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-container {
+    width: 95%;
+    padding: 14px;
+  }
+
+  .error-heading {
+    font-size: 1.3rem;
+  }
+
+  .error-item {
+    padding: 12px;
+  }
+
+  .error-title {
+    font-size: 1rem;
+  }
+
+  .error-description {
+    font-size: 0.85rem;
+  }
+}
