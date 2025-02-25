@@ -40,7 +40,7 @@ To set up the project locally, follow these steps:
 ### **Steps to Install**:
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/yourusername/json-validator-react.git](https://github.com/LakshmipathiNakka/Tag-Validator-2025.git)
+   git clone https://github.com/LakshmipathiNakka/Tag-Validator-2025.git
    ```
 2. Navigate into the project directory:
    ```bash
@@ -112,13 +112,6 @@ This project utilizes the following technologies:
 
 ---
 
-## **API Documentation** (if applicable)
-
-If the project integrates with a backend API or provides API endpoints, you would list the API documentation here. This includes:
-
-- **Endpoints**: The available routes for interacting with the backend.
-- **Request Format**: How requests should be formatted (e.g., JSON, query parameters).
-- **Response Format**: The expected response format (e.g., JSON with success/error messages).
 
 
 ## **Contributing Guidelines**
@@ -128,7 +121,7 @@ We welcome contributions from the community. If you want to contribute to this p
 1. **Fork the repository** on GitHub.
 2. **Clone your fork**:
    ```bash
-   git clone https://github.com/yourusername/json-validator-react.git
+   git clone https://github.com/LakshmipathiNakka/Tag-Validator-2025.git
    ```
 3. **Create a new branch** for your changes:
    ```bash
@@ -162,6 +155,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 If you have any questions or need further assistance, feel free to reach out:
 
 - Email: lakshmeepathin184@gmail.com
-- GitHub:[ [https://github.com/yourusername](https://github.com/yourusername)](https://github.com/LakshmipathiNakka)
+- GitHub: https://github.com/LakshmipathiNakka
 
 ---
