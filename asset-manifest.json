@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TagNames-Validator/static/css/main.3925895b.css",
+    "main.js": "/TagNames-Validator/static/js/main.94c78777.js",
+    "index.html": "/TagNames-Validator/index.html",
+    "main.3925895b.css.map": "/TagNames-Validator/static/css/main.3925895b.css.map",
+    "main.94c78777.js.map": "/TagNames-Validator/static/js/main.94c78777.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3925895b.css",
+    "static/js/main.94c78777.js"
+  ]
+}
