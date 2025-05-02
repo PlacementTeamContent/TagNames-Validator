@@ -15,17 +15,6 @@ JSON Validator is a web-based React application designed to help users upload, v
 
 ---
 
-## **Demo & Screenshots**
-
-### **Live Demo**:
-You can view the live demo of the application here: [Insert live demo link]
-
-### **Screenshots**:
-![Screenshot 1](path_to_screenshot_1.jpg)  
-![Screenshot 2](path_to_screenshot_2.jpg)
-
----
-
 ## **Installation Guide**
 
 To set up the project locally, follow these steps:
